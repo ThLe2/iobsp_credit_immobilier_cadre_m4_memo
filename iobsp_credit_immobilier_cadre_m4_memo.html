@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — Les caractéristiques financières</title><style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}.tri .h,.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}@media(max-width:640px){.tri,.duo{grid-template-columns:1fr}}.enc,tr,.tri,.duo{break-inside:avoid}
+.enc p,.cols p{margin:6px 0}.enc.ok{background:#F1F7F3;border-left-color:var(--ok)}.enc.ok .t{color:var(--ok)}
+.cols{display:grid;gap:14px;margin:16px 0}.cols.c2{grid-template-columns:1fr 1fr}.cols.c3{grid-template-columns:repeat(3,1fr)}.cols.c4{grid-template-columns:repeat(4,1fr)}.cols.c5,.cols.c6{grid-template-columns:repeat(3,1fr)}
+.cols>div>.enc{margin:0;height:100%}.cols table{margin:0}
+p.src{font-size:12.5px;color:var(--gris-moyen);line-height:1.5}
+td,th{vertical-align:top}
+@media(max-width:760px){.cols.c2,.cols.c3,.cols.c4,.cols.c5,.cols.c6{grid-template-columns:1fr}}
+table.frise{table-layout:fixed;font-size:13px}.enc h3{margin:2px 0 8px;font-family:Georgia,serif;color:var(--prune-fonce);font-size:16px}
+.cols>div>.enc{margin:0}
+
+/* Frise et cartes (remplacent les tableaux « frise » issus de la conversion du PDF) */
+.etapes{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:16px 0;counter-reset:etape}
+.etape{position:relative;background:#fff;border:1px solid var(--filet);border-top:4px solid var(--prune);border-radius:8px;padding:12px 12px 11px;font-size:14px;line-height:1.4;color:var(--gris)}
+.etape .tt{display:block;font-weight:800;color:var(--prune-fonce);margin-bottom:5px;font-size:14.5px;line-height:1.25}
+.etape .ref{display:block;margin-top:6px;font-size:12.5px;color:var(--gris-moyen)}
+.etapes.ordre .etape{padding-top:26px}
+.etapes.ordre .etape::before{counter-increment:etape;content:counter(etape);position:absolute;top:-13px;left:12px;width:24px;height:24px;border-radius:50%;background:var(--prune);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.etape.vente{border-top-color:#2E5C8A}.etape.vente .tt{color:#1F4468}.etapes.ordre .etape.vente::before{background:#2E5C8A}
+.etape.alerte{border-top-color:var(--ko)}.etape.alerte .tt{color:var(--ko)}
+@media (max-width:900px){.etapes{grid-template-columns:repeat(3,1fr);row-gap:22px}}@media (max-width:520px){.etapes{grid-template-columns:repeat(2,1fr)}}
+.legende{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--gris);margin:-4px 0 14px}
+.legende span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--prune)}
+.legende .vente::before{background:#2E5C8A}
+</style></head><body>
+<header class="bandeau"><div class="wrap"><div class="chapitre">IOBSP NIVEAU 2 · JOURNÉE 5 · CRÉDIT IMMOBILIER (1/3) — MODULE 4</div><h1>Les caractéristiques financières</h1><p class="sous">Fiche mémo détaillée — TAEG, usure, taux fixe / variable / capé, amortissement</p></div></header>
+<main class="wrap"><a class="dl" href="J5_M4_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<h2>1 · Pourquoi le taux nominal ne suffit pas</h2>
+<p>Le <b>taux nominal</b> (ou taux débiteur) sert à calculer les intérêts. C&#x27;est le chiffre que la banque affiche. Mais un crédit immobilier ne coûte pas que des intérêts: il coûte aussi des <b>frais de dossier</b>, une <b>assurance</b>, une <b>garantie</b>, et parfois votre <b>commission</b>. D&#x27;où le <b>TAEG</b>, qui agrège tout et permet la comparaison.</p>
+<div class="enc"><span class="t">UNE MÊME NOTION, DEUX RÉGIMES</span><p>Les articles <b>L. 314-1 et suivants</b> du code de la consommation gouvernent le TAEG du crédit à la <b>consommation</b> (journée 3) <b>et</b> du crédit <b>immobilier</b>. En immobilier, l&#x27;écart entre l&#x27;affichage et la réalité est plus important: <b>l&#x27;assurance emprunteur pèse lourd et varie énormément d&#x27;un dossier à l&#x27;autre</b>.</p></div>
+<h2>2 · Ce que le TAEG contient — le critère unique</h2>
+<div class="enc"><span class="t">LE CRITÈRE, ET LUI SEUL</span><p><b>Le TAEG intègre TOUS LES COÛTS QUI CONDITIONNENT L&#x27;OCTROI DU CRÉDIT.</b><br>Si le prêt <b>ne peut pas être obtenu</b> sans payer cette somme, elle entre dans le TAEG.</p></div>
+<div class="cols c2"><div><div class="enc"><p><b>INCLUS</b><br>Les <b>intérêts</b><br>Les <b>frais de dossier</b> et commissions<br>Les primes d&#x27;<b>assurance OBLIGATOIRE</b><br>Les <b>frais de garantie</b> connus et déterminables<br>Les <b>frais d&#x27;évaluation</b> du bien s&#x27;ils sont imposés<br>Les <b>frais d&#x27;intermédiation</b> — votre rémunération, lorsque le client la supporte<br>Les <b>parts sociales</b> dont la souscription conditionne le prêt</p></div></div><div><div class="enc"><p><b>EXCLUS</b><br><b>LES FRAIS DE NOTAIRE LIÉS À L&#x27;ACQUISITION</b><br>Les <b>assurances facultatives</b><br>Les <b>indemnités de remboursement anticipé</b><br>Les frais liés à un <b>incident de paiement</b><br>Les <b>frais de tenue de compte</b> — sauf s&#x27;ils conditionnent l&#x27;octroi</p></div></div></div>
+<div class="enc al"><p><b>LE POINT LE PLUS CONTRE-INTUITIF — ET LA NUANCE QUI L&#x27;EXPLIQUE</b></p><p>Les <b>frais de notaire d&#x27;acquisition</b> sont les plus lourds de l&#x27;opération, et pourtant <b>ils ne sont pas dans le TAEG</b>. Pourquoi ? Parce qu&#x27;ils sont dus <b>que le bien</b> <b>soit financé à crédit ou payé comptant</b>: ils appartiennent à <b>l&#x27;achat</b>, non au <b>prêt</b>.<br>En revanche les <b>frais de garantie</b> y entrent lorsqu&#x27;ils sont déterminables — <b>car sans garantie, pas de prêt</b>. Or ils sont eux aussi perçus par le notaire. <b>C&#x27;est donc le CONDITIONNEMENT qui départage, et non l&#x27;identité de celui qui encaisse.</b></p></div>
+<div class="enc"><span class="t">UNE JURISPRUDENCE À CONNAÎTRE</span><p>Lorsque l&#x27;octroi du prêt est <b>conditionné à la souscription de parts sociales</b>, leur montant doit être <b>intégré au calcul du taux</b>. Position posée par la Cour de cassation en 2004 et réaffirmée depuis. <i>Le critère reste le même: ce qui conditionne l&#x27;octroi entre dans le taux.</i></p></div>
+<h2>3 · TAEG ou TEG — le piège du module</h2>
+<table><thead><tr><th></th><th><b>TEG — taux effectif global</b></th><th><b>TAEG — taux annuel effectif global</b></th></tr></thead><tbody><tr><td><b>Méthode</b></td><td><b>PROPORTIONNELLE</b>: taux de période × nombre de périodes</td><td><b>ÉQUIVALENTE</b>, dite actuarielle: égalité, selon la méthode des <b>intérêts composés</b>, entre les sommes prêtées et l&#x27;ensemble des versements dus</td></tr><tr><td><b>Précision</b></td><td>Ignore les intérêts composés · <b>sous-estime</b> le coût réel</td><td>Harmonisée au niveau <b>européen</b> · comparabilité entre établissements et entre pays</td></tr><tr><td><b>Champ</b></td><td>Prêts finançant une <b>activité professionnelle</b> · personnes morales de <b>droit public</b> <i>(art. R. 314-2)</i></td><td>Crédits à la <b>consommation</b> et crédits <b>immobiliers</b> des particuliers <i>(art. R. 314-3)</i></td></tr></tbody></table>
+<div class="enc"><span class="t">LA CONSÉQUENCE ARITHMÉTIQUE</span><p>À données identiques, <b>le TAEG est légèrement SUPÉRIEUR au TEG</b> — non parce que le crédit coûte plus cher, mais <b>parce que le calcul est plus juste</b>. <b>La ligne à retenir: TAEG pour les particuliers, TEG pour le professionnel et le public.</b> Un TEG mentionné sur un crédit immobilier de particulier signale un document ancien — ou une erreur.</p></div>
+<h2>4 · L&#x27;exemple chiffré de référence</h2>
+<p class="src"><i>200 000 € sur 240 mois · taux nominal 3,10% · assurance 50 € par mois · frais de dossier et de garantie 3 000 €.</i></p>
+<table><thead><tr><th><b>Élément</b></th><th><b>Montant</b></th><th><b>Dans le TAEG ?</b></th></tr></thead><tbody><tr><td><b>Mensualité hors assurance</b></td><td>1 119,23 €</td><td>—</td></tr><tr><td><b>Assurance emprunteur (obligatoire)</b></td><td>50,00 € / mois</td><td><b>OUI</b></td></tr><tr><td><b>Échéance totale</b></td><td><b>1 169,23 €</b></td><td>—</td></tr><tr><td><b>Total des intérêts sur 20 ans</b></td><td>68 616,11 €</td><td><b>OUI</b></td></tr><tr><td><b>Total de l&#x27;assurance sur 20 ans</b></td><td>12 000,00 €</td><td><b>OUI</b></td></tr><tr><td><b>Frais de dossier et de garantie</b></td><td>3 000,00 €</td><td><b>OUI</b></td></tr><tr><td><b>COÛT TOTAL DU CRÉDIT</b></td><td><b>83 616,11 €</b></td><td>—</td></tr><tr><td><b>Frais de notaire d&#x27;acquisition</b></td><td>≈ 7 à 8% du prix</td><td><b>NON</b></td></tr></tbody></table>
+<div class="enc ok"><p><b>CE QUE L&#x27;EXEMPLE DÉMONTRE</b></p><p><b>Taux nominal 3,10% → TAEG 3,83%</b> par la méthode équivalente. <b>Sept dixièmes de point d&#x27;écart</b> entre ce que le client retient et ce qu&#x27;il paie réellement. Le même dossier calculé par la <b>méthode proportionnelle</b> donnerait <b>3,76%</b>: l&#x27;écart entre les deux méthodes est réel, mais bien plus faible que celui entre le nominal et le TAEG.</p></div>
+<h2>5 · L&#x27;usure</h2>
+<table><thead><tr><th><b>Point</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>Le principe</b></td><td>Le <b>TAEG doit rester INFÉRIEUR au taux d&#x27;usure</b> — plafond légal au-delà duquel le prêt est réputé usuraire <i>(art. L. 314-6)</i></td></tr><tr><td><b>Qui le fixe</b></td><td>La <b>Banque de France</b>, <b>trimestriellement</b>, <b>par catégorie de prêt</b>. En immobilier, la catégorie dépend notamment de la <b>durée</b> et du caractère <b>fixe ou variable</b> du taux</td></tr><tr><td><b>Sanction du dépassement</b></td><td>Les sommes perçues au-delà du seuil sont <b>imputées sur les intérêts échus, puis sur le capital</b>, et restituées si le prêt est soldé <i>(art. L. 341-48)</i>. L&#x27;usure est en outre un <b>délit</b> <i>(art. L. 341-50)</i>.</td></tr></tbody></table>
+<div class="enc"><span class="t">LA SITUATION QUE VOUS RENCONTREREZ</span><p>C&#x27;est souvent <b>L&#x27;ASSURANCE</b> qui fait franchir le seuil, sur les dossiers de clients <b>âgés</b> ou présentant un <b>risque aggravé</b>. Le taux nominal est acceptable, l&#x27;assurance est chère, et le TAEG passe au-dessus de l&#x27;usure.<br><b>Le dossier est alors refusé non parce que le client est insolvable, mais parce que le taux est devenu illégal.</b> Situation frustrante et fréquente — elle prépare la journée 9.</p></div>
+<div class="enc ci"><p><b>AUCUN SEUIL N&#x27;EST CHIFFRÉ DANS CES SUPPORTS</b></p><p>Comme en journée 3, et pour la même raison: <b>les seuils changent chaque trimestre</b>. Seule la méthode est enseignée. Consulter la publication de la Banque de France.</p></div>
+<h2>6 · Fixe, variable, capé — qui porte le risque ?</h2>
+<div class="cols c3"><div><div class="enc"><h3>FIXE</h3><p>Déterminé à la signature, <b>ne change pas</b>. Échéance connue à l&#x27;euro près.<br><b>Risque porté par LA BANQUE</b> — et facturé, d&#x27;où un taux de départ plus élevé</p></div></div><div><div class="enc"><h3>VARIABLE</h3><p>Indexé sur un <b>indice de marché</b> majoré d&#x27;une <b>marge</b>, révisé selon la périodicité du contrat. <b>Risque porté par L&#x27;EMPRUNTEUR</b>, intégralement. Taux de départ attractif</p></div></div><div><div class="enc"><h3>CAPÉ</h3><p>Variable assorti d&#x27;une <b>limite de variation</b> (capé +1, +2).<br><b>Risque PARTAGÉ</b>: l&#x27;emprunteur jusqu&#x27;au plafond, la banque au-delà. Départ un peu plus élevé qu&#x27;un variable sec</p></div></div></div>
+<div class="enc"><span class="t">DEUX QUESTIONS À POSER SYSTÉMATIQUEMENT DEVANT UN TAUX VARIABLE</span><p>① <b>Le cap joue-t-il aussi À LA BAISSE ?</b> Beaucoup de contrats sont capés dans les deux sens, ce qui limite le gain autant que la perte.<br>② <b>Lors d&#x27;une révision, que varie-t-il — l&#x27;ÉCHÉANCE, la DURÉE, ou les deux ?</b> Ce n&#x27;est pas la même chose pour le client, et <b>c&#x27;est écrit au contrat</b>.</p></div>
+<div class="enc"><p><b>L&#x27;ERREUR DE PRÉSENTATION À ÉVITER</b></p><p>Le taux capé <b>n&#x27;est pas un taux fixe déguisé</b>. C&#x27;est un taux <b>variable</b> dont la variation est plafonnée: <b>le client supporte la hausse jusqu&#x27;au cap</b>.</p></div>
+<h2>7 · Échéances et amortissement</h2>
+<p>Dans un prêt amortissable classique, <b>l&#x27;échéance est constante — mais sa composition ne l&#x27;est pas</b>.</p>
+<div class="enc"><p>Les intérêts se calculent sur le <b>capital restant dû</b>. Au début, ce capital est maximal: la part d&#x27;intérêts est donc <b>à son plus haut</b> — près de la moitié de l&#x27;échéance dans l&#x27;exemple de la section 4 — et la part de capital à son plus bas. À mesure que le capital diminue, les intérêts diminuent et la part de capital augmente.</p></div>
+<div class="enc"><span class="t">CE QUE VOS CLIENTS DÉCOUVRENT AVEC STUPEUR</span><p><b>Après cinq ans sur un prêt de vingt ans, on a remboursé bien moins que le quart du capital.</b></p></div>
+<table><thead><tr><th><b>Application pratique</b></th><th><b>Explication</b></th></tr></thead><tbody><tr><td><b>Le remboursement anticipé est d&#x27;autant plus intéressant</b> <b>qu&#x27;il intervient TÔT</b></td><td>Il supprime les intérêts futurs, calculés sur un capital encore élevé</td></tr><tr><td><b>Une revente rapide laisse un capital restant dû proche</b> <b>du montant emprunté</b></td><td>Si le prix du bien a baissé, <b>le vendeur est en difficulté</b>: le prix ne couvre pas la dette</td></tr></tbody></table>
+<p class="src"><i>Il existe d&#x27;autres modes que l&#x27;échéance constante — amortissement constant, différé partiel ou total. Ils prennent leur sens avec les produits de la</i> <b>journée 7</b> <i>et ne sont pas détaillés ici.</i></p>
+<div class="enc"><p><b>ENCADRÉ PROFESSIONNEL — HORS PROGRAMME D&#x27;EXAMEN</b></p><p>Les normes du <b>Haut Conseil de stabilité financière</b> ne figurent pas au programme de la section B.4, mais elles commandent toute la pratique: <b>taux d&#x27;effort</b> <b>plafonné à 35%</b> des revenus nets, <b>assurance comprise</b> · <b>durée maximale de 25 ans</b>, portée à <b>27 ans</b> en vente en l&#x27;état futur d&#x27;achèvement ou en cas de travaux d&#x27;au moins 10% de l&#x27;opération · <b>marge de flexibilité de 20%</b> de la production trimestrielle. Contraignantes depuis le 1 er janvier 2022, maintenues</p><p>sans assouplissement en mars 2026. <i>Données issues de sources secondaires — à recontrôler avant chaque session.</i></p></div>
+<div class="enc"><p><b>CE QUI TOMBE À L&#x27;EXAMEN</b></p><p>• Critère du TAEG: <b>tous les coûts qui CONDITIONNENT L&#x27;OCTROI</b>.<br>• <b>Exclus</b>: frais de notaire d&#x27;acquisition · assurances facultatives · IRA · frais d&#x27;incident.<br>• <b>Inclus</b>: intérêts · frais de dossier · assurance obligatoire · frais de garantie déterminables · frais d&#x27;intermédiation.<br>• <b>TAEG</b> = méthode <b>équivalente</b> (particuliers) · <b>TEG</b> = méthode <b>proportionnelle</b> (professionnel, personnes morales de droit public).<br>• À données identiques, le <b>TAEG est légèrement supérieur</b>.<br>•<br>• <b>Fixe</b> = risque banque · <b>variable</b> = risque emprunteur · <b>capé</b> = risque partagé.<br>• Les intérêts se calculent sur le <b>capital restant dû</b>: premières échéances peu amortissantes.</p><div class="enc ok"><p><b>Usure</b>: seuil trimestriel Banque de France, par catégorie. Sanction: <b>imputation des perceptions excessives</b> (L. 341-48) et <b>délit</b> (L. 341-50).</p></div></div>
+<p class="src"><b>Sources vérifiées au 19 août 2026.</b> <i>Code de la consommation, art. L. 314-1 et suivants (TAEG), R. 314-2 (méthode proportionnelle), R. 314-3 (méthode équivalente), L. 314-6 (usure) ·</i> <i>directive 2014/17/UE transposée par l&#x27;ordonnance n° 2016-351 du 25 mars 2016 · ordonnance n° 2025-880 du 3 septembre 2025 (citée pour être écartée) · arrêté du 18 juillet 2022,</i></p>
+<div class="enc"><p><i>annexe A. L&#x27;exemple chiffré a été calculé et vérifié en interne. Sanction de l&#x27;usure vérifiée sur le texte le 18/11/2026 (art. L. 341-48 et L. 341-50). Réserves: la liste des éléments inclus et</i> <i>exclus du TAEG provient de sources secondaires concordantes — à confirmer sur les articles R. 314-4</i></p></div>
+<p class="src"><i>Haut Conseil de stabilité financière sont à recontrôler avant chaque session.</i> <b>Point de vigilance:</b> <i>les articles L. 314-1 et suivants sont COMMUNS aux deux régimes — une modification</i> <i>apportée pour le crédit à la consommation peut toucher un texte que l&#x27;immobilier applique aussi.</i></p>
+</main>
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</body></html>
